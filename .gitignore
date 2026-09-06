@@ -1,0 +1,10 @@
+# Ne jamais versionner les données et secrets Home Assistant
+config/*
+!config/.gitkeep
+
+# Fichiers sensibles explicites
+secrets.yaml
+*.db
+*.db-shm
+*.db-wal
+.storage/
