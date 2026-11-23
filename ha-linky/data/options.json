@@ -1,0 +1,17 @@
+{
+  "meters": [
+    {
+      "prm": "05177134494746",
+      "token": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTUyNzc5MTcsImV4cCI6MTg4OTc5OTUxNywic3ViIjpbIjA1MTc3MTM0NDk0NzQ2Il19.gtE6rs_wHFk9j5anSFlclgLpn6q6BEWjlUnjuYg_X-4",
+      "name": "Consommation Linky",
+      "action": "sync",
+      "production": false
+    }
+  ],
+    "costs": [
+    { "entity_id": "sensor.tarif_edf_tempo_9kva_tarif_actuel_tempo_9kva_ttc", "start_date": "2026-11-22" },
+    { "price": 0.1356, "before": "06:00", "end_date": "2026-11-22" },
+    { "price": 0.1654, "after": "06:00", "before": "22:00", "end_date": "2026-11-22" },
+    { "price": 0.1356, "after": "22:00", "end_date": "2026-11-22" }
+  ]
+}

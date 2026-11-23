@@ -12,6 +12,24 @@ services:
     ports:
       - "127.0.0.1:8123:8123"
 
+  ha-linky:
+    build:
+      context: https://github.com/bokub/ha-linky.git
+      dockerfile: standalone.Dockerfile
+    image: ha-linky
+    container_name: ha-linky
+    restart: unless-stopped
+    depends_on:
+      - homeassistant
+    environment:
+      - SUPERVISOR_TOKEN=${HA_LINKY_TOKEN}
+      - WS_URL=ws://homeassistant:8123/api/websocket
+      - TZ=Europe/Paris
+    volumes:
+      - ./ha-linky/data:/data
+    networks:
+      - homeassistant_network
+
 networks:
   homeassistant_network:
     external: true
